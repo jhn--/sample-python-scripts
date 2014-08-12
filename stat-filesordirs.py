@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-import os
+import os, sys
 
 path = raw_input("Enter a absolute path to a directory or a file.\
-	E.g. \"/bin/\" or \"/bin/chmod\"")
+	E.g. \"/bin\" or \"/bin/chmod\". > ")
 
 def statfile(path):
 	try:
@@ -12,6 +12,6 @@ def statfile(path):
 	except OSError:
 		print "OS error({0}): {1}" .format(OSError.errno, OSError.strerror)
 	except:
-		print "Unexpected error:", os.exc_info()[0]
+		print "Unexpected error:", sys.exc_info()[0]
 
 print statfile(path)
