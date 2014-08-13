@@ -22,7 +22,7 @@ def _check_paths_(useraccount, source_path, destination_path, destination_ip, ex
 def _syncthemall_(useraccount, source_path, destination_path, destination_ip, exclude_element):
 	for d_ip in destination_ip:
 		print "############ transferring to %s ############" % d_ip
-		rsync_args = ["/usr/bin/rsync", "--exclude="+str(exclude_element), "-ave", "ssh", str(source_path), str(useraccount+"@"+d_ip+":"+destination_path)]
+		rsync_args = ["/usr/bin/rsync", "--exclude="+exclude_element, "-ave", "ssh", source_path, useraccount+"@"+d_ip+":"+destination_path]
 		print "executing " + " ".join(rsync_args)
 		try:
 			subprocess.call(rsync_args)
