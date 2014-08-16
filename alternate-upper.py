@@ -14,3 +14,6 @@ for i, j in list(enumerate(a)):										#add index to the list, a.
 		b.append(j)													#continue adding letter to new list, b, even if index representing it is not divisible by 2
 c = ''.join(b)
 print c
+
+d = string.swapcase(c)
+print d
