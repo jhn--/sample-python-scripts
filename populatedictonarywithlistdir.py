@@ -2,20 +2,31 @@
 
 import os
 
-listing = {}
-_files = []
+def getcontents(here):
+	listing = {}
+	_files = []
+	insidehere = os.listdir(here)
 
-here = os.getcwd()
-insidehere = os.listdir(os.getcwd())
+	#print "here", here
+	#print "insidehere", insidehere
+	
+	for i in insidehere:
+		if os.path.isfile(os.path.join(here, i)):
+			_files.append(i)
+			listing['.'] = _files
+		elif os.path.isdir(os.path.join(here, i)):
+			listing[i] = os.listdir(os.path.join(here, i))
+	showcontents(listing)
 
-for i in insidehere:
-	if os.path.isfile(i):
-		_files.append(i)
-		listing['.'] = _files
-	elif os.path.isdir(i):
-		listing[i] = os.listdir(os.path.join(here, i))
+def showcontents(listing):
+	for i in listing:
+		print i
+		for j in listing[i]:
+			print "|---", j
 
-for z in listing:
-	print z
-	for y in listing[z]:
-		print "|--", y
+here = raw_input("Enter full path: ")
+
+if os.path.exists(here):
+	getcontents(here)
+else:
+	print "Folder doesn't exists."
