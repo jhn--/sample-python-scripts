@@ -7,9 +7,6 @@ def getcontents(here):
 	_files = []
 	insidehere = os.listdir(here)
 
-	#print "here", here
-	#print "insidehere", insidehere
-	
 	for i in insidehere:
 		if os.path.isfile(os.path.join(here, i)):
 			_files.append(i)
