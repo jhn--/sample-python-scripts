@@ -3,25 +3,23 @@
 import sys, os
 import argparse
 from time import strftime
+import time
+start_time = time.time()
 
 def checkfiles(file1, file2):
     """Simple check on whether the files exists. file1 should exist, file2 should not. If file2 exists, we can choose to overwrite it, or exit."""
 
     files = [file1, file2]
-    try:
-        os.stat(files[0])
-    except OSError as (errno, strerror):
-        return "OS Error: Error code %d. The file/directory: \"%s\". %s." % (errno, os.path.basename(files[0]), strerror)
 
-    try:
-        os.stat(files[1])
+    if os.path.isfile(files[0]) == False:
+        sys.exit("File {0} does't exist.".format(files[0]))
+    elif os.path.isfile(files[1]) == True:
         answer = input("File {0} exists, do you want to overwrite it? ".format(files[1]))
         if answer.lower() == 'yes' or answer.lower() == 'y':
             return files
         else:
-            print("Exiting..")
-            return
-    except:
+            sys.exit("Exiting...")
+    else:
         return files
 
 def getoccurencesfromfile(file1, file2, svctime):
@@ -48,3 +46,4 @@ if __name__ == '__main__':
     #print("{0} --- {1} --- {2}".format(args.file1, args.file2, args.seconds))
 
     getoccurencesfromfile(args.file1, args.file2, args.seconds)
+    print("--- %s seconds ---" % (time.time() - start_time))
