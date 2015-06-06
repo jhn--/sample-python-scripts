@@ -1,0 +1,9 @@
+1    this is line 1,
+2    this is line 2.
+3    snake
+4    line 4?
+5    yes, line 5!!!!!!!!
+6    hello!
+7    i like to have a snake soup, please.
+8    SNAKE!!!!!
+9    goodbye

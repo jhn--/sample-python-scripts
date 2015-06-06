@@ -1,0 +1,360 @@
+None
+import strings
+import string
+help(string)
+help(join)
+d = ' '.join(c)
+help(raw_args)
+help(raw_input)
+help(string)
+help(enumerate)
+help(sys_
+help(sys)
+import sys
+help(sys)
+import(math)
+import math
+help(math)
+math.floor(2.9)
+math.floor(3.9)
+math.floor(3.1)
+float("2.0")
+type(float("2.0"))
+type(float("lol"))
+abc(-3+4j)
+abs(-3+4j)
+-3+4j
+help(map)
+map("test")
+help(ord)
+ord("a)
+ord("a")
+help(ord)
+help(b)
+help("b")
+ord("b")
+ord(b)
+ord(1)
+ord("1")
+help(chr)
+chr(97)
+dir([])
+help(__add__)
+help([])
+a = []
+help([])
+a.__add__(y)
+a.__add__(a)
+a.__add__("1")
+a = [1,2,3]
+b = [4,5,6]
+a.__add__(b)
+help([])
+help(repr)
+print a + b
+help(repr)
+repr(123)
+repr(abc)
+repr("abc")
+type(repr("abc"))
+for i in repr("abc"): print i
+for i in repr('abc'): print i
+sys.path
+for i in sys.path: print i
+sys.os
+sys.plat
+sys.platform
+sys.ps1
+sys.ps2
+sys.ps3
+sys.modules
+for i,v in sys.modules: print i
+for i,v in sys.modules: print v
+sys.version
+dir(sys.version)
+dir(os)
+dir(os.getcwd())
+import os
+dir(os)
+dir(os.popen)
+type dir(os.getenviron)
+type dir(os.getenviron())
+os.environ
+os.environ()
+os.getcwd()
+cmp
+cmp(1,2)
+dir(cmp)
+help(cmp)
+cmp(1,-4)
+type(cmp(1,2))
+min("abc")
+mind([a,b,c]_
+mind([a,b,c])
+min([a,b,c])
+min([a,b])
+mind(abc)
+min(abc)
+min("abc")
+c = 9000
+min([a,b,c])
+print a
+print b
+ord a
+ord(a)
+type(a)
+len(a)
+dir(str)
+hasatt(str, islower)
+hasattr(str, islower)
+hasattr(str, 'islower')
+getattr(str)
+getattr(str, 'islower')
+getattr(str, 'isr')
+help(exec)
+exec
+exec()
+exec(ls)
+exec('ls')
+code = x = "something"
+print code
+print x
+x = "nothing"
+print x
+exec code
+exec(code)
+exec("code")
+print x
+print code
+code = 'x = "something"'
+print x
+print code
+exec(code)
+print x
+x = "nothing"
+print x
+exec(code)
+print code
+print x
+help(exec)
+dir(exec)
+help(exec)
+help(exec())
+help(compile)
+z = eval("'x0' * 3")
+print z
+x = "error"
+raise x
+help(callable)
+callable(str)
+callable(iloveyou)
+callable(__mul__)
+callable(__mul__())
+callable(>)
+callable(int)
+callable(os.version)
+import os
+callable(os.version)
+callable(sys.version)
+sys.version
+callable(sys.version), type(sys.version)
+open(chunkofwords, 'w')
+open('chunkofwords', 'w')
+close
+close()
+flush()
+close('chunkofile')
+f = open('chunkofwords', 'w')
+f.write("This is a paragraph that mentions bell peppers multiple times. For
+one, here is a red pepper and dried tomato salad recipe. I don't like
+to use green peppers in my salads as much because they have a harsher
+flavor.
+This second paragraph mentions red peppers and green peppers but not
+the "s" word (s-a-l-a-d), so no bells should show up.
+This third paragraph mentions red peppercorns and green peppercorns,
+which aren't vegetables but spices (by the way, bell peppers really
+aren't peppers, they're chilies, but would you rather have a good cook
+or a good botanist prepare your salad?).
+f.close()
+f = open('chunkofwords', 'r')
+f.read()
+f.close()
+f = open('chunkofwords', 'r')
+f.write("This is a paragraph that mentions bell peppers multiple times. For \
+one, here is a red pepper and dried tomato salad recipe. I don't like \
+to use green peppers in my salads as much because they have a harsher \
+flavor. \
+\
+This second paragraph mentions red peppers and green peppers but not \
+the "s" word (s-a-l-a-d), so no bells should show up. \
+\
+This third paragraph mentions red peppercorns and green peppercorns, \
+which aren't vegetables but spices (by the way, bell peppers really \
+aren't peppers, they're chilies, but would you rather have a good cook \
+f.close()
+f.read()
+os.getcwd()
+f = open("chunkofwords", 'w')
+f.write('This is a paragraph that mentions bell peppers multiple times. For \
+one, there is a read pepper and dried tomato salad recipe. I don't like \
+f = open("chunkofwords", 'w')
+f.write('This is a paragraph that mentions bell peppers multiple times. For \
+one, here is a red pepper and dried tomato salad recipe. I don\'t like \
+to use green peppers in my salads as much because they have a harsher flavor.\
+\
+This second paragraph mentions red peppers and green peppers but not \
+the \"s\" word (s-a-l-a-d), so no bells should show up. \
+\
+This third paragraph mentions red peppercorns and green peppercorns, \
+which aren\'t peppers, they\'re chillies, but would you rather have a good cook \
+or a good botanist to prepare your salad?')
+f.close()
+f = open("chunkoftext", "r")
+f = open("chunkofwords", "r")
+f.read()
+g = open("chunkofwords2", 'r')
+f.read()
+g.read()
+f.close()
+g.close()
+g.read()
+import string
+file = open("chunkofwords")
+text = file.read()
+paragraphs = string.split(text, '\n\n')
+print paragraphs
+for i in paragraphs: print i
+print paragraphs[0]
+print paragraphs[1]
+print paragraphs[2]
+import json
+json.dump(1,2,3)
+json.dump([1,2,3])
+json.dumps([a,b,c]_
+json.dumps([a,b,c])
+help(json)
+print os.getcwd()
+os.getcwd()
+system(cat chunkofwords)
+system('cat chunkofwords')
+import os
+system('cat chunkofwords')
+os.system('cat chunkofwords')
+os.chmod(os.getcwd()+'/changemode', 777)
+os.chmod(os.getcwd()+'/changemode', 644)
+os.chmod(os.getcwd()+'/changemode', 111)
+os.chmod(os.getcwd()+'/changemode', 1110)
+os.chmod(os.getcwd()+'/changemode', 0000)
+os.chmod(os.getcwd()+'/changemode', 0777)
+os.chmod(os.getcwd()+'/changemode', 0000)
+os.chmod(os.getcwd()+'/changemode', 777)
+os.chmod(os.getcwd()+'/changemode', 001)
+os.chmod(os.getcwd()+'/changemode', 011)
+os.chmod(os.getcwd()+'/changemode', 111)
+os.chmod(os.getcwd()+'/changemode', 1110)
+os.chmod(os.getcwd()+'/changemode', 0111)
+os.chmod(os.getcwd()+'/changemode', 0777)
+os.symlink(os.getcwd()+'/changemode', dst)
+os.symlink(os.getcwd()+'/changemode', 'dst')
+os.chown(os.getcwd()+'/changemode', 0, 0)
+os.chown(os.getcwd()+'/changemode', 501, 12)
+os.unlink('changemode')
+help(os)
+print os.path.join(os.getcwd(), 'chunkofwords')
+os.exists(os.getcwd(), 'chunkofwords')
+os.path.exists(os.getcwd(), 'chunkofwords')
+os.path.exists(os.getcwd(), 'chunkofwords'))
+os.path.exists(os.path.join(os.getcwd(), 'chunkofwords')))
+os.path.exists(os.path.join(os.getcwd(), 'chunkofwords'))
+os.path.exists(os.getcwd())
+os.path.split(os.getcwd())
+os.path.split('/usr/abc/123/456')
+os.path.split('/usr/abc/123/456/')
+os.path.expanduser('~/')
+os.path.expanduser('~')
+expandvars('$PATH')
+os.path.expandvars('$PATH')
+split(os.path.expandvars('$PATH'), ':')
+os.path.expandvars('$PATH').split(":")
+os.path.expandvars('$PATH').split()
+os.path.expandvars('$PATH').split(':')
+for i in os.path.expandvars('$PATH').split(':'): print i
+print os.path.normpath(os.getcwd()+'../abc')
+print os.path.normpath(os.getcwd()+'/../abc')
+os.path.samefile('chunkofwords', 'chunkofwords2')
+os.path.ismount('/dev/disk0s2')
+os.path.ismount('/dev')
+os.path.samefile(file1, file2)
+os.path.samefile('file1', 'file2')
+os.path.samefile('file1', 'file1')
+os.symlink('file1', 'link1')
+os.path.samefile('file1', 'link1')
+os.path.islink('link1')
+os.path.isdir('link1')
+os.path.isfile('link1')
+os.path.walk('.')
+os.walk('.')
+_walk_ = os.walk('.')
+print _walk_
+list(_walk_)
+for i in list(_walk_): print i
+list(_walk_)
+_walk_ = list(os.walk('.')
+print _walk_
+_walk_ = list(os.walk('.'))
+print _walk_
+for i in _walk_: print i
+for root, dirs, files in os.walk(".", topdown=False):
+    for name in files:
+        print(os.path.join(root, name))
+    for name in dirs:
+        print(os.path.join(root, name))
+ls
+os.rename('chunkofwords', '../pepper.txt')
+import shutils
+import shutil
+shutil.copy('../1', '../2')
+shutil.copytree('../1', '../2')
+shutil.copytree('../1', '../2', symlinks=0)
+shutil.copytree('../1', '../2', symlinks=1)
+print os.getcwd()
+f = open(os.path.join(os.getcwd(), 'python-command-history.txt', 'rw')
+)
+f = open(os.path.join(os.getcwd(), 'python-command-history.txt'), 'rw')
+f = open(os.path.join(os.getcwd(), 'python-command-history.txt'), 'w')
+import readline
+for i in range(readline.get_current_history_length()): f.write(i+"\n")
+for i in range(readline.get_current_history.length()):
+    print readline.get_history_item(i)
+for i in range(readline.get_current_history_length()):
+    print readline.get_history_item(i)
+for i in range(readline.get_current_history_length()):
+    f.write(i)
+for i in range(readline.get_current_history_length()):
+    f.write(readline.get_history_item(i))
+for i in range(readline.get_current_history_length()):
+    f.write(str(readline.get_history_item(i)))
+f.close()
+f = open(os.path.join(os.getcwd(), 'python-command-history.txt'), 'rw')
+for i in range(readline.get_current_history_length()):
+    f.write(str(readline.get_history_item(i))+"\n")
+import os, readline
+print os.getcwd()
+f = open(os.path.join(os.getcwd(), 'python-command-history.txt'), 'w')
+try:
+	for i in range(readline.get_current_history_length()):
+		f.write(str(readline.readline.get_history_item(i))+"\n")
+except IOError as (errno, strerror):
+	print errno +": "+strerror
+finally:
+	f.close
+#! /usr/bin/env python
+import os, readline
+print os.getcwd()
+f = open(os.path.join(os.getcwd(), 'python-command-history.txt'), 'w')
+try:
+	for i in range(readline.get_current_history_length()):
+		f.write(str(readline.get_history_item(i))+"\n")
+except IOError as (errno, strerror):
+	print errno +": "+strerror
+finally:
