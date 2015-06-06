@@ -1,25 +1,47 @@
-#lets just try to open a file first.
+#python3
 
 import sys, os
+from optparse import OptionParser
+from time import strftime
 
-here = os.getcwd()
+def checkfiles(file1, file2):
+    """Simple check on whether the files exists. file1 should exist, file2 should not."""
 
-there_file = '/Users/john/Documents/SwiftServe/FETCH_WIDXMEM_20150424.txt'
-there_file2 = '/Users/john/Documents/SwiftServe/WASD.txt'
+    files = [file1, file2]
+    try:
+        os.stat(file1)
+    except OSError as (errno, strerror):
+        return "OS Error: Error code %d. The file/directory: \"%s\". %s." % (errno, os.path.basename(file1), strerror)
 
-def getonelinefromfile(there_file):
-    there_file_contents = open(there_file, 'r')
-    there_file2_write = open(there_file2, 'w')
-    getline = there_file_contents.readlines()
+    try:
+        os.stat(file2)
+        answer = input("File {0} exists, do you want to overwrite it?")
+        if answer.lower() == 'yes' or answer.lower() == 'y':
+            return files
+        else:
+            print("Exiting..")
+            return
+    except:
+        return files
+
+def getoccurencesfromfile(file1, file2, svctime):
+    """If the service time(svctime), column 4, from file is greater than a certain amount, copy them out into file2."""
+
+    files = checkfiles(file1, file2)
+    file1_read = os.open(files[0], 'r')
+    file2_write = os.open(files[1], 'w')
+
+    getline = file1_read.readlines()
     for i in getline:
-        if float(i.split()[3]) > 1:
-            there_file2_write.write(i)
-    there_file2_write.close()
-    there_file_contents.close()
+        if float(i.split()[3]) > svctime:
+            file2_write.write(i)
+    file2_write.close()
+    file1_read.close()
 
-try:
-    print(getonelinefromfile(there_file))
-except Exception as e:
-    raise e
+#def changefilename(file2):
+#    datum = strftime("%Y-%m-%d_%H:%M:%S") #E.g. '2015-06-06_23:14:17'
+#    file2a = os.path.split(file2)[0] #E.g. '('/path/to', 'file.ext')' or ('', 'file.ext')
+#    file2b = os.path.split(file2)[1]
 
-print(here) 
+if __name__ == '__main__':
+    getoccurencesfromfile(*args)
