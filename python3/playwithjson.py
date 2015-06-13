@@ -38,11 +38,12 @@ class playwithjson:
 
     def getjsonkeys(self):
         jp = self.access_json()
-        keys = jp[0].keys()
+        #keys = jp[0].keys()
         print("The keys of this json file is: ")
-        for i in list(keys):
+        print('\n'.join(jp[0].keys()))
+        #for i in list(keys):
             #print("\t" + i)
-            print(i)
+        #    print(i)
 
     def getjsonkeyinfo(self, key):
         jp = self.access_json()
@@ -62,9 +63,9 @@ class playwithjson:
     def getbalanceforsomeone(self, name):
         jp = self.access_json()
         for i in jp:
-            if name in i:
-                balance_ = float(i["balance"].strip('$').replace(',', ''))
-                print("The balance of %s is %s.".format(i["name"], balance_))
+            if name in i["name"]:
+                #balance_ = float(i["balance"].strip('$').replace(',', ''))
+                print("The balance of {0} is {1}.".format(i["name"], i["balance"]))
             else:
                 continue
 
