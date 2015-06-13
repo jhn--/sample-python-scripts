@@ -7,24 +7,14 @@ from pprint import pprint
 import sys
 
 class playwithjson:
-    """A simple class which opens and reads json files, there's an sample json file to use @ /Users/john/Dropbox/Work/projects/programming/python/sample-python-scripts/example.json"""
+    """A simple class which opens and reads json files."""
     def __init__(self, jsonfile):
         self.jsonfile = jsonfile
-        print("##1")
-        print(self.jsonfile)
-        print("##2")
-        print(type(self.jsonfile))
-        print("##3")
 
-    def __str__(self):
-        print(self.jsonfile)
+    #def __str__(self):
+    #    print(self.jsonfile)
 
     def access_json(self):
-        print("##4")
-        print(str(self.jsonfile))
-        print("##5")
-        print(str(self.jsonfile).endswith('.json'))
-        print("##6")
         if str(self.jsonfile).endswith('.json'):
             try:
                 fp = open(self.jsonfile, "r+")
@@ -34,13 +24,9 @@ class playwithjson:
                     exit()
             else:
                 with fp:
-                    #print(fp.read())
-                    #print(type(fp.read()))
-                    #return fp.read()
                     jp = json.load(fp)
-                    #print(jp)
-                    print(type(jp))
                     return jp
+                    fp.close()
         else:
             print("This file is a not a json file.")
 
@@ -48,12 +34,22 @@ class playwithjson:
         jp = self.access_json()
         for i in jp:
             pprint(i)
-#            pprint(i)
-            #return i
-#        for index in jp:
-#            return index
-#            for k, v in index.items():
-#                return k, v
+
+    def getjsonkeys(self):
+        keys = []
+        jp = self.access_json()
+        for k, v in jp[0].items():
+            keys.append(k)
+        print("The keys of this json file is: ")
+        for i in keys:
+            print(i)
+
+    def getjsonkeyinfo(self, key):
+        jp = self.access_json()
+        key_values = []
+        for i in jp:
+            key_values.append(i[key])
+        print(key_values)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -61,6 +57,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     right = playwithjson(args.jsonfile)
-    right.__str__()
-    #print(right)
-    right.showjsoncontents()
+    #right.showjsoncontents()
+    right.getjsonkeys()
+    right.getjsonkeyinfo("name")
