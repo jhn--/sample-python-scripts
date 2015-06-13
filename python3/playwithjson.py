@@ -29,6 +29,7 @@ class playwithjson:
                     fp.close()
         else:
             print("This file is a not a json file.")
+            exit()
 
     def showjsoncontents(self):
         jp = self.access_json()
@@ -36,12 +37,11 @@ class playwithjson:
             pprint(i)
 
     def getjsonkeys(self):
-        keys = []
         jp = self.access_json()
-        for k, v in jp[0].items():
-            keys.append(k)
+        keys = jp[0].keys()
         print("The keys of this json file is: ")
-        for i in keys:
+        for i in list(keys):
+            #print("\t" + i)
             print(i)
 
     def getjsonkeyinfo(self, key):
@@ -50,6 +50,23 @@ class playwithjson:
         for i in jp:
             key_values.append(i[key])
         print(key_values)
+
+    def getbalance(self):
+        jp = self.access_json()
+        balances = {}
+        for i in jp:
+            balance_ = float(i["balance"].strip('$').replace(',', ''))
+            balances[i["name"]] = balance_
+        pprint(balances)
+
+    def getbalanceforsomeone(self, name):
+        jp = self.access_json()
+        for i in jp:
+            if name in i:
+                balance_ = float(i["balance"].strip('$').replace(',', ''))
+                print("The balance of %s is %s.".format(i["name"], balance_))
+            else:
+                continue
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -60,3 +77,5 @@ if __name__ == '__main__':
     #right.showjsoncontents()
     right.getjsonkeys()
     right.getjsonkeyinfo("name")
+    right.getbalance()
+    right.getbalanceforsomeone("Barbara")
