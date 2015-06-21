@@ -10,7 +10,7 @@ def getjson(jsonurl):
 def postfirebase(firebaseurl, jsondata, branch = ''):
     """Put the json information to firebase."""
     posttofirebase = firebase.FirebaseApplication(firebaseurl, None)
-    if branch[0] == '':
+    if branch == '':
         posttofirebase.post('/', jsondata)
     else:
         branch = "/" + branch[0]
