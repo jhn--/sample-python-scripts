@@ -6,10 +6,10 @@ Write a program that reads a text file and produces an output file which is a co
 def add_line_number(infile, outfile):
     f = open(infile, "r")
     xs = f.readlines()
-
     g = open(outfile, "w")
     for i, val in enumerate(xs):
-        a = "{0:<5}{1}".format(i+1, val)
+        a = "{0:04d} {1}".format(i+1, val)
+        print(a)
         g.write(a)
     g.close()
     f.close()
