@@ -1,10 +1,10 @@
 import unittest
 
-from two_sum.main import ts
+from two_sum.two_sum import ts
 
 
 class TestTwoSum(unittest.TestCase):
-    def two_sum_success(self):
+    def test_succes(self):
         '''
         two_sum(arr, target) ought to return [0,1]
         '''
@@ -13,8 +13,7 @@ class TestTwoSum(unittest.TestCase):
         result1 = ts(arr1, target1)
         expected_result1 = [0, 1]
         self.assertEqual(result1, expected_result1)
-
-    def two_sum_fail(self):
+    def test_fail(self):
         '''
         two_sum(arr, target) ought to return [-1,-1]
         '''
