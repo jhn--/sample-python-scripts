@@ -56,3 +56,9 @@ Thumbs.db
 *.gif
 
 python2/
+
+python3/try_firebase\.py
+
+python3/generate_firebase_token\.py
+
+python3/.vscode/
