@@ -1,6 +1,6 @@
 import unittest
 
-import two_sum
+from two_sum.main import ts
 
 
 class TestTwoSum(unittest.TestCase):
@@ -10,7 +10,7 @@ class TestTwoSum(unittest.TestCase):
         '''
         arr1 = [2, 7, 11, 15]
         target1 = 9
-        result1 = two_sum.ts(arr1, target1)
+        result1 = ts(arr1, target1)
         expected_result1 = [0, 1]
         self.assertEqual(result1, expected_result1)
 
@@ -20,7 +20,7 @@ class TestTwoSum(unittest.TestCase):
         '''
         arr2 = [2, 7, 11, 15]
         target2 = 10
-        result2 = two_sum.ts(arr2, target2)
+        result2 = ts(arr2, target2)
         expected_result2 = [-1,-1]
         self.assertEqual(result2, expected_result2)
 
