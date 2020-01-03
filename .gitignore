@@ -63,3 +63,5 @@ python3/generate_firebase_token\.py
 
 python3/.vscode/
 python3/twosum/\.vscode/
+
+python3/twosum/\.pytest_cache/

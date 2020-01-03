@@ -1,41 +1,29 @@
-# import unittest
+import unittest
 
-# import two_sum
-
-
-# class TestTwoSum(unittest.TestCase):
-#     def two_sum_success(self):
-#         '''
-#         two_sum(arr, target) ought to return [0,1]
-#         '''
-#         arr = [2, 7, 11, 15]
-#         target = 9
-#         result = two_sum(arr, target)
-#         self.assertEqual(result, [0, 1])
-
-#     def two_sum_fail(self):
-#         '''
-#         two_sum(arr, target) ought to return [-1,-1]
-#         '''
-#         arr = [2, 7, 11, 15]
-#         target = 10
-#         result = two_sum(arr, target)
-#         self.assertEqual(result, [-1, -1])
+import two_sum
 
 
-# if __name__ == '__main__':
-#     unittest.main()
+class TestTwoSum(unittest.TestCase):
+    def two_sum_success(self):
+        '''
+        two_sum(arr, target) ought to return [0,1]
+        '''
+        arr1 = [2, 7, 11, 15]
+        target1 = 9
+        result1 = two_sum.ts(arr1, target1)
+        expected_result1 = [0, 1]
+        self.assertEqual(result1, expected_result1)
 
-import pytest
+    def two_sum_fail(self):
+        '''
+        two_sum(arr, target) ought to return [-1,-1]
+        '''
+        arr2 = [2, 7, 11, 15]
+        target2 = 10
+        result2 = two_sum.ts(arr2, target2)
+        expected_result2 = [-1,-1]
+        self.assertEqual(result2, expected_result2)
 
-from two_sum import two_sum
 
-def two_sum_success():
-    arr = [2, 7, 11, 15]
-    target = 9
-    assert two_sum(arr, target) == [0,1], 'should be [0,1]'
-
-def two_sum_fail():
-    arr = [2, 7, 11, 15]
-    target = 10
-    assert two_sum(arr, target) == [-1,-1], 'should be [-1,-1]'
+if __name__ == '__main__':
+    unittest.main()
