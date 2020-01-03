@@ -17,7 +17,7 @@ Given nums = [2, 7, 11, 15], target = 9,
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 """
-def two_for(arr: list, target: int) -> list:
+def two_sum(arr: list, target: int) -> list:
     '''
     if y, the result of (target-x), exists in the list (arr)
     return the indexes of both x and y.
@@ -30,6 +30,6 @@ def two_for(arr: list, target: int) -> list:
     
     return [-1,-1]
 
-arr = [2, 7, 11, 15]
-target = 18
-print(two_for(arr, target))
+# arr = [2, 7, 11, 15]
+# target = 9
+# print(two_sum(arr, target))
