@@ -54,3 +54,5 @@ Thumbs.db
 *.jpg
 *.png
 *.gif
+
+python2/
