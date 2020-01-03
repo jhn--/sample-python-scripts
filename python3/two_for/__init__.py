@@ -19,18 +19,17 @@ return [0, 1].
 """
 def two_for(arr: list, target: int) -> list:
     '''
-    x: int, the current value in the list, arr
-    xi: index of x
-    z: int, the current value in the list, arr in the second loop
-    zi: index of z
+    if y, the result of (target-x), exists in the list (arr)
+    return the indexes of both x and y.
     '''
-    for (xi, x) in enumerate(arr):
-        for (zi, z) in enumerate(arr):
-            if xi == zi:
-                pass
-            if target - x == z:
-                return [xi, zi]
-    return []
+
+    for x in enumerate(arr):
+        y = target - x
+        if y in arr:
+            return [arr.index(x), arr.index(y)]
+    
+    return [-1,-1]
+        
 
 # arr = [2, 7, 11, 15]
 # target = 18
