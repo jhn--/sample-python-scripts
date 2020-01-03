@@ -23,14 +23,13 @@ def two_for(arr: list, target: int) -> list:
     return the indexes of both x and y.
     '''
 
-    for x in enumerate(arr):
+    for x in arr:
         y = target - x
         if y in arr:
             return [arr.index(x), arr.index(y)]
     
     return [-1,-1]
-        
 
-# arr = [2, 7, 11, 15]
-# target = 18
-# print(two_for(arr, target))
+arr = [2, 7, 11, 15]
+target = 18
+print(two_for(arr, target))
