@@ -19,6 +19,6 @@ def get_element(target, dict = dict):
     #except KeyError:
         return "\'{0}\' does not exist.".format(target)
 
-print(multi_insert(['hoe chih chang', 'happy happy', 'are you okay?', 'lim bo seng', 'ong teng cheong']))
-print(get_element('hoe chih chang'))
-print(get_element('john hoe'))
+print(multi_insert(['alex', 'happy happy', 'are you okay?', 'lim bo seng', 'ong teng cheong']))
+print(get_element('alex'))
+print(get_element('john'))
